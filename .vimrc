@@ -9,7 +9,8 @@ set smartcase
 set backspace=indent,eol,start
 " Pathogen
 set nocp
-call pathogen#infect()
-call pathogen#helptags()
+" do silent calls in case pathogen isn't installed
+silent! call pathogen#infect()
+silent! call pathogen#helptags()
 syntax on
 filetype plugin indent on
